@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b080d">
+  <title>A Little Letter for You 🖤</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#home" class="logo">for you, always <span>♡</span></a>
+    <a href="#memories" class="nav-link">our memories ↓</a>
+  </header>
+
+  <main class="container" id="home">
+
+    <section class="hero">
+      <p class="eyebrow">✦ A LITTLE SOMETHING FOR YOU ✦</p>
+
+      <h1>For My Favourite Person</h1>
+      <h2 class="nickname">My Thangamey <span>♥</span></h2>
+
+      <p class="intro">
+        Some things are easier to write than to say.
+        So, I made this little corner of the universe for you.
+      </p>
+
+      <!-- MUSIC PLAYER -->
+      <section class="music-card">
+        <p class="section-label">♫ OUR LITTLE SOUNDTRACK</p>
+        <div class="music-icon" aria-hidden="true">♪</div>
+        <h3>A song that reminds me of you</h3>
+        <p class="music-caption">This song describe how much you means to me 🖤</p>
+
+        <audio id="ourSong" preload="metadata" loop>
+          <source src="our_song.mp3" type="audio/mpeg">
+        </audio>
+
+        <button class="music-button" id="musicButton">
+          ▶ Play our song
+        </button>
+        <p class="music-status" id="musicStatus" aria-live="polite">
+          Made for our little moments ♡
+        </p>
+      </section>
+
+      <!-- ORIGINAL LOVE LETTER ENVELOPE -->
+      <div class="envelope-area">
+        <button class="envelope" id="envelope"
+                aria-label="Open your love letter">
+          <span class="envelope-heart">♥</span>
+          <span class="envelope-hint">OPEN ME</span>
+        </button>
+      </div>
+
+      <p class="click-note" id="clickNote">
+        Tap the envelope to open your letter ♡
+      </p>
+    </section>
+
+    <!-- ORIGINAL LETTER -->
+    <section class="letter" id="letter" hidden>
+      <p class="letter-top">✉ A LETTER JUST FOR YOU</p>
+
+      <h2>Hey, favourite human. 🖤</h2>
+
+      <div class="letter-message" id="letterMessage"></div>
+
+      <p class="signature">
+        With all my love,<br>
+        <span>your favourite person ♡</span>
+      </p>
+
+      <button class="love-button" id="loveButton">
+        One last little thing...
+      </button>
+
+      <p class="final-message" id="finalMessage" hidden>
+        I LOVE YOU. ALWAYS. NO MATTER WHAT. ♥
+      </p>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="memories" id="memories">
+      <p class="section-label">✦ LITTLE MOMENTS, BIG MEMORIES ✦</p>
+      <h2>Us, in little pieces. <span>♡</span></h2>
+      <p class="memory-intro">
+        A few moments with my favourite human.
+      </p>
+
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="photo1.jpeg"
+               alt="A favourite memory together" loading="lazy">
+          <figcaption>One of my favourite memories ♡</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="photo3.jpeg"
+               alt="Another special memory together" loading="lazy">
+          <figcaption>My favourite troublemaker 🖤</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="photo2.jpeg"
+               alt="A happy moment together" loading="lazy">
+          <figcaption>Just us being us.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- OPEN WHEN YOU MISS ME -->
+    <section class="miss-letter-section" id="miss-me">
+      <p class="section-label">✦ FOR THE DAYS YOU MISS ME ✦</p>
+      <h2>Wish I was there? <span>♡</span></h2>
+
+      <p class="memory-intro">
+        Here's a little piece of me for the days we're apart.
+      </p>
+
+      <button class="miss-envelope" id="missEnvelope"
+              aria-expanded="false"
+              aria-controls="missLetter">
+        <span class="miss-envelope-heart">♥</span>
+        <span class="miss-envelope-hint">OPEN WHEN YOU MISS ME</span>
+      </button>
+
+      <article class="miss-letter" id="missLetter" hidden>
+        <p class="letter-top">✉ OPEN THIS WHEN YOU MISS ME</p>
+        <h2>Hey, my Thangamey. 🖤</h2>
+
+        <div class="miss-letter-message" id="missLetterMessage"></div>
+
+        <p class="signature">
+          Sending you the biggest hug,<br>
+          <span>your favourite person ♡</span>
+        </p>
+      </article>
+    </section>
+
+    <!-- FINAL SECRET -->
+    <section class="secret-section">
+      <p class="section-label">✦ A LITTLE SECRET ✦</p>
+      <h2>One last little <span>thing...</span></h2>
+      <p class="memory-intro">
+        There's something else I want you to know.
+      </p>
+
+      <button class="secret-button" id="secretButton"
+              aria-expanded="false" aria-controls="secretMessage">
+        Discover your little surprise ♡
+      </button>
+
+      <div class="secret-message" id="secretMessage" hidden>
+        <div class="big-heart">♥</div>
+        <h3>You're my favourite person.</h3>
+        <p>
+          If I had to find my best friend all over again,
+          I'd still hope it would be you.
+        </p>
+        <p class="forever">You, in every lifetime. 🖤</p>
+      </div>
+    </section>
+
+    <footer>
+      <button class="footer-heart" id="footerHeart"
+              aria-label="Send a little love">♥</button>
+      <p>made with love, just for you</p>
+      <p class="footer-small">My Thangamey, always. ♡</p>
+    </footer>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
